@@ -1,0 +1,346 @@
+body{
+	margin: 0;
+	color: #000;
+	font: 11px Arial, Helvetica, sans-serif;
+	background: #fff;
+}
+@font-face {
+	font-family: "HelveticaNeueLTStd-Th";
+	src: url(../fonts/HelveticaNeueLTStd-Th.otf);
+	src: url(http://www.myfontfree.com/data/541/h/helveticaneueltstdblk/helveticaneueltstd-blk.otf);
+}
+img{border-style: none;}
+a{
+	text-decoration: none;
+	color: #000;
+}
+a:hover{text-decoration: underline;}
+input,
+textarea,
+select{
+	font: 100% arial, sans-serif;
+	vertical-align: middle;
+}
+form, fieldset{
+	margin: 0;
+	padding: 0;
+	border-style: none;
+}
+header, footer, article, section, hgroup, nav, figure {display: block;}
+body, html {
+	height: 100%;
+	margin: 0;}
+	#wrapper{
+		min-height: 100%;
+	}
+	#header{
+	}	
+	.container {
+		padding: 0 100px;
+		margin: 0 auto;
+		max-width: 1200px;
+		/* position: relative;	 */
+	}
+	.container:after{
+		display: block;
+		content:'';
+		clear: both;
+	}
+	/* dark-grey bar on the top of the header */
+	#header-bar{
+		background: #000;
+		width: 100%;	
+	}
+	.adress {	
+		float: left;
+		padding: 9px 0;	
+	}
+
+	#header-bar span {
+		color: #fff;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+	#header-bar select {
+		color: #fff;
+		font-weight: bold;
+		background: #000;
+		border-style: none;
+	}
+	#header-bar select option{	
+		font-weight: bold;
+	}
+	#header-bar .profile{
+		float: right;
+		margin: 0;
+		position: relative;
+		padding:0;
+		list-style:none;
+	}
+	#header-bar li {
+		float: left;
+		border-right: 1px #444444 solid;
+		margin: 0;
+		padding: 7px 0;	
+	}
+	#header-bar li:first-child {
+		border-left: 1px #444444 solid;
+	}
+	#header-bar li a span:before{
+		display: inline-block;
+		width: 27px;
+		height: 17px;
+		vertical-align: middle;
+		content: '';
+		background: url(../images/ico-account.png) no-repeat;
+	}	
+	#header-bar li span:before{
+		display: inline-block;
+		width: 25px;
+		height: 17px;
+		vertical-align: middle;
+		content: '';
+		background: url(../images/ico-search.png) no-repeat;
+	}
+	.profile ul {
+		display: none;
+	}
+
+	/* навигационная панель */
+	#header-info {
+		background: #fff;
+		width: 100%;	
+		overflow: hidden;
+	}
+	.logo{
+		margin: 30px 0;
+		width: 121px;
+		height: 28px;
+		float: left;
+		overflow: hidden;
+		background: url(../images/logo.png) no-repeat;	
+	}
+	#nav {
+		padding: 0;
+		margin: 31px 0;
+		list-style: none;
+		float: right;
+		position: relative;
+	}
+
+	#nav ul{
+		position: absolute;
+		top: 19px;
+		left: 0px;
+		display: none;
+		width: 150px;
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+	#nav li{
+		position: relative;
+	}
+	#nav > li{
+		float: left; 
+	}
+	#nav > li:hover > ul{
+		display: block; 
+	}
+	#nav ul li:hover ul{
+		top: 0;
+		left: 150px; 
+	}
+	#nav a:hover {
+		text-decoration: none;
+	}
+	#nav span{
+		font: 16px Arial, Helvetica, sans-serif;
+		padding-left: 15px;
+	}
+	#nav > li:after{
+		display: inline-block;	
+		width: 10px;
+		height: 7px;
+		vertical-align: middle;
+		content: '';
+		background: url(../images/ico-dropdawn.png) no-repeat;
+	}
+
+	/* slider  */
+	.slider-holder{
+		margin: 0 auto;
+		max-width: 1600px;
+		position: relative;
+		display: block;
+	}
+
+	.slider-holder .prev,
+	.slider-holder .next{
+		position: absolute;
+		cursor: pointer;
+		top: 50%;
+		text-indent: -9999px;
+		overflow: hidden;
+		height: 118px;
+		width: 30px;
+		margin-top: -59px;
+		z-index: 3;
+	}
+	.slider-holder .prev{
+		left: 0px;
+		background: url(../images/btn-prev.png) no-repeat;
+	}
+	.slider-holder .next{
+		right: 0px;
+		background: url(../images/btn-next.png) no-repeat;
+	}
+	.slider {
+		overflow: hidden;
+		position: relative;
+		z-index: 1;
+		max-height: 586px;
+	}
+	.slider ul{
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+	.slider div{
+		box-shadow: 0 20px 0 rgba(0, 0, 0, 0.1);	/*!!! не работает - не могу сделать inset*/
+		/*z-index: 5;*/
+	}
+	.slider img {
+		width: 100%;
+	}
+	.paging{
+		padding: 20px;
+		margin: 0;
+		list-style: none;
+		/*position: absolute;*/
+		bottom: -40px;
+		left: 0;
+		width: 100%;
+		text-align: center;
+		z-index: 3;
+		height: 9px;
+	}
+	.paging li{
+		display: inline-block;
+		padding: 0 10px;
+	}
+	.paging a{
+		display: block;
+		overflow: hidden;
+		text-indent: -9999px;
+		width: 11px;
+		height: 15px;
+		background: url(../images/btn-paging.gif) no-repeat;
+	}
+	.paging a:hover,
+	.paging .active a{
+		background: url(../images/btn-paging-active.gif) no-repeat;
+	}
+	.paging li{
+		position: relative;
+		overflow: hidden;
+	}
+	/*crazy summer shop now block*/
+	.summer {
+		line-height: 18px;
+		padding: 10px;
+		position: absolute;
+		height: 30%;
+		bottom: 50%;
+		left: 20%;
+		right: 50%;
+		z-index: 15;
+	}
+	.summer .shop-button {
+		font-family: HelveticaNeueLTStd-Th;
+		font-size: 16px;
+		color: #fff;
+		text-transform: uppercase;
+		vertical-align: middle;
+		padding: 0 20px;
+	}
+	.summer .shop-button:after {
+		display: inline-block;
+		width: 6px;
+		height: 15px;
+		vertical-align: middle;
+		content: '';
+		background: url(../images/ico-shop-now.gif) no-repeat;
+	}
+	.summer a {
+		display: inline-block;	
+		background-color: #ffa687;
+		width: 155px;
+		height: 57px
+		box-shadow: inset 0 3px #dd6b44;  /*box-shadow doesn't work!!! check why*/
+	}
+	.summer a:hover {
+		text-decoration: none;
+	}
+
+	/*social bar*/
+	.socials {
+		position: relative;
+		overflow: hidden;
+		background: #ededed;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		font: 12px Arial, Helvetica, sans-serif;
+		color: #6b6b6b;
+		line-height: 55px;
+	}
+	.socials .soc-left {
+		display: block;
+		float: left;
+		margin: 0;
+		padding: 0 10px 0 0;
+	}
+	.socials .soc-right {
+		display: block;
+		float: right;
+		margin: 0;
+		padding: 0;
+	} 
+	.socials input[type="text"] {
+		border: none; 
+		outline: none; 
+		-webkit-appearance: none;
+		width: 135px;
+		padding: 10px;
+		font-style: italic;
+	}
+	
+	/*кнопка не заменяется фоном. проверить, возм. заменить кнопку ссылкой*/
+	.socials input[type="submit"] {
+		width: 30px;
+		height: 30px;
+		border: none;
+		background: url(../images/ico-subscribe.gif) no-repeat; 
+	}
+	.socials .facebook {
+		background: url(../images/ico-fb.gif) no-repeat;
+		width: 30px;
+		height: 30px;
+		border: none;
+		vertical-align: middle;
+	}
+	.socials .twitter {
+		background: url(../images/ico-twitter.gif) no-repeat;
+		width: 30px;
+		height: 30px;
+		border: none;
+		vertical-align: middle;
+	}
+	.socials .pinterest {
+		background: url(../images/ico-pinterest.gif) no-repeat;
+		width: 30px;
+		height: 30px;
+		border: none;
+		vertical-align: middle;
+	}
