@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Array generator</title>
+</head>
+<body>
+	<h1>Array generator</h1>
+	<p>Click on the <strong>"Generate"</strong> button will create a random array, which consists of <strong>n</strong> elements at the range between 1 and 100. Click on the <strong>"Step"</strong> button will make a new array based on the random array and step to chose elements</p>
+	<p id="legend">Please, enter the number of elements and click the button</p>
+	<input type="number" id="number" required="required">
+	<button onclick="arrGenerator()">Generate</button>
+	<p id="result"> </p>
+	<p id="legend">After the random array is created, please enter a step for a new array</p>
+	<input type="number" id="step" required="required" disabled>
+	<button onclick="arrCount(randomArray)">Step</button>
+	<p id="bystep"> </p>
+	<p><strong>Please, reload the page to try again!</strong></p>
+	<style>
+		#legend {display: inline-block; width: 500px;}
+		#number {-moz-appearance: textfield;}
+		#number::-webkit-inner-spin-button {display: none;}
+		#step {-moz-appearance: textfield;}
+		#step::-webkit-inner-spin-button {display: none;}
+		button {width: 70px;}
+	</style>
+	<script>
+		// Task 1: Generating a random array
+		var randomArray = new Array();
+		function arrGenerator() {
+			var elemArrayIndex = 0;
+			var n = document.getElementById("number").value; //getting a number of elements from the input
+			var n = Math.abs(Math.floor(+n)); 
+			// check if the number of elements is not 0 
+			if (n == 0) {
+				alert ("Please, enter the number of elements")
+			}
+			else {
+				// creating an array
+				while (elemArrayIndex < n) {
+					elemArray = Math.floor((Math.random() * 100) + 1);				
+					randomArray[elemArrayIndex] = elemArray;
+					elemArrayIndex++;
+				}
+
+			// displaying the result
+			var x = document.getElementById("result");
+			x.innerHTML = ("The random array: " + randomArray);
+			document.getElementById("step").disabled = false; // enabling the step input for the 2nd task 
+		}
+	}
+			// Task 2: Making a new array from the random array, based on step
+			var stepArray = new Array(); 
+			function arrCount(arr, m)	{
+				var m = document.getElementById("step").value; //getting a step from the input
+				var m = Math.abs(Math.floor(+m));
+				if (m == 0) {
+					alert ("Wrong step!")
+				}
+				else if	(m > arr.length) {
+					alert ("Step is bigger than the number of elements in the array!")
+				}
+				else {
+				// creating an array
+				for (var i = (m-1); i < arr.length; i = i + m) {
+					var elemArray = arr[i];
+					stepArray.push(elemArray);
+				}
+				// displaying the result
+				var y = document.getElementById("bystep")
+				y.innerHTML = ("The new array: " + stepArray);
+			}
+		}
+	</script>
+</body>
+</html>
+
