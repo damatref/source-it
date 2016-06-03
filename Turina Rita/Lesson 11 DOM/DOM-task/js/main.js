@@ -77,7 +77,6 @@
                 alert("Last Name must be filled out");
                 return false;
             } else {
-                return true;
                 alert("The form is sent successfully!");
             }
         }
