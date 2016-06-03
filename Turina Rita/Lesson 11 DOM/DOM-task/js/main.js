@@ -70,11 +70,14 @@
             if (firstName.value == null || firstName.value == "") {
                 firstName.style.borderColor = "red";
                 alert("Name must be filled out");
+                return false;
 
             } else if (lastName.value == null || lastName.value == "") {
-                alert("Last Name must be filled out");
                 lastName.style.borderColor = "red";
+                alert("Last Name must be filled out");
+                return false;
             } else {
+                return true;
                 alert("The form is sent successfully!");
             }
         }
