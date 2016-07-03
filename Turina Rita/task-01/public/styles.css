@@ -1,0 +1,30 @@
+/* Styles here */
+* {font: 100% arial,sans-serif;}
+a{
+	text-decoration: none;
+	color: dimgray;
+}
+.content {
+    border: 1px solid gray;
+}
+.content-block {
+    min-height: 400px;
+    outline: 1px solid gray; /*remove this property*/
+}
+.tabs {
+	padding: 0;
+    list-style: none;
+    margin: 0 0 -1px;
+    position: relative;
+}
+.tabs li {
+    display: inline-block;
+    border: 1px solid #4f4d4d;
+    padding: 5px;
+    margin: 0;
+    background: lightgray;
+    border-radius: 3px 3px 0 0;
+}
+.tabs .active {
+	 background: white;
+}
